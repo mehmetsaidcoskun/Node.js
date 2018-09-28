@@ -2,6 +2,51 @@
 
 ### Assignment
 
+### To-Do API
+
+This week we wrote an Express application with request body in JSON
+format.
+
+There are 4 [CRUD](https://en.wikipedia.org/wiki/Create%2C_read%2C_update_and_delete)
+actions:
+
+#### `createTodo` (`POST /todos`)
+
+  Creates a new to-do
+
+#### `readTodos` (`GET /todos`)
+
+  Reads and lists all to-dos
+
+#### `updateTodo` (`PUT /todos/:id`)
+
+  Updates the description of a to-do with ID `:id`
+
+#### `deleteTodo` (`DELETE /todos/:id`)
+
+  Deletes a to-do with ID `:id`
+
+### Request Body Format
+
+When calling the `create` or `update` actions, the request body must look like
+this:
+
+```json
+{
+  "todo": {
+    "description": "(todo description)"
+  }
+}
+```
+
+Note that for these actions, the client must add the following header:
+
+- `Content-Type`: `application/json`
+
+In Postman, make sure to add this header, and set the Body type to _raw_ and
+_JSON (application/json)_.
+
+
 Read through the code from the lecture, make sure you understand the flow of the
 program.
 
